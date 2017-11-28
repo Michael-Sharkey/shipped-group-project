@@ -9,23 +9,22 @@ class JobsController < ApplicationController
   end
 
   def new
-@job = Job.new
+    @job = Job.new
   end
 
   def create
-@job = Job.new(job_params)
-@job.user_id = current_user.id
+    @job = Job.new(job_params)
+    @job.user_id = current_user.id
 
-if @job.save
-  redirect_to root_path
-else
-  render 'new'
-end
-  end
+      if @job.save
+        redirect_to root_path
+      else
+        render 'new'
+      end
+    end
 
   private
   def job_params
-    params.require(:job).permit(:name, :description, :origin, :destination, :cost, :capacity)
-
+    params.require(:job).permit(:name, :description, :cost, :capacity)
   end
 end
