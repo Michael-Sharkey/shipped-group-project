@@ -1,0 +1,14 @@
+<table id="boats" style="width:45%">
+  <tr>
+    <th>Name</th>
+    <th>Containers</th>
+    <th>Locations</th>
+    <th>User ID</th>
+  </tr>
+  <tr><% @boats.each do |boat| %>
+    <td><%= boat.name %></td>
+    <td><%= boat.containers %></td>
+    <td><%= boat.location %></td>
+    <td><%= boat.user_id %></td>
+  <% end %></tr>
+</table>
