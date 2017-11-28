@@ -1,3 +1,6 @@
 <h1>Welcome To Our Database</h1>
 <div><%= render 'boats/index' %></div>
 <div><%= render 'jobs/index' %></div>
+
+<br>
+<%= button_to 'LOG OUT', destroy_user_session_path, method: :delete %>
