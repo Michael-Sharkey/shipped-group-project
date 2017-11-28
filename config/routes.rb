@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
-  root 'devise/sessions#new'
+  root 'welcome#index'
 
   resources :boats, except: [:edit, :update, :destroy]
-  resources :boats, except: [:edit, :update, :destroy]
+  resources :jobs, except: [:edit, :update, :destroy]
   get
 end
