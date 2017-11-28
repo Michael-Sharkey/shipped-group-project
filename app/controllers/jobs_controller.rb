@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  before_action :authenticate_user!
   def index
     # see all the jobs
   end
