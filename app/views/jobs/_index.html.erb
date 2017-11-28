@@ -1,0 +1,20 @@
+<h1>Jobs</h1>
+
+<table id="boats" style="width:45%">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>Cost</th>
+    <th>Capacity</th>
+  </tr>
+  <tr><% @jobs.each do |job| %>
+    <td><%= job.name %></td>
+    <td><%= job.description %></td>
+    <td><%= job.origin %></td>
+    <td><%= job.destination %></td>
+    <td><%= job.cost %></td>
+    <td><%= job.capacity %></td>
+  <% end %></tr>
+</table>
