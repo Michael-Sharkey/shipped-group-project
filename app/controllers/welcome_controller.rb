@@ -5,4 +5,8 @@ class WelcomeController < ApplicationController
     @boats = Boat.all
     @jobs = Job.all
   end
+
+  def locations
+    require 'faker'
+  end
 end
