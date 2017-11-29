@@ -1,2 +1,7 @@
 <h1>Job Invoice</h1>
-<h2><%= @job.name %></h2>
+<h2>Job: <%= @job.name %></h2>
+<ul>
+  <li>Description: <%= @job.description %></li>
+  <li>Total Estimated Cost: $<%= @job.cost %></li>
+  <li>Total shipping weight: <%= @job.capacity %> pounds</li>
+</ul>
