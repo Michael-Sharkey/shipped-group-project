@@ -1,7 +1,7 @@
 class ShipmentsController < ApplicationController
 
   def index
-    # see all the shipments
+    @shipments = Shipment.all
   end
 
   def show
