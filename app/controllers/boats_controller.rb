@@ -5,7 +5,7 @@ class BoatsController < ApplicationController
   end
 
   def show
-    # see just one boat
+    @boat = Boat.find_by(params[:id])
   end
 
   def new
