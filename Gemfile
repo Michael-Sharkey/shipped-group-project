@@ -5,8 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
 # Special Gems
 gem "paperclip", "~> 5.0.0"
+gem 'faker'
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
