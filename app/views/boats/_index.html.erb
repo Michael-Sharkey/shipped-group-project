@@ -10,5 +10,6 @@
     <td><%= boat.containers %></td>
     <td><%= boat.location %></td>
     <td><%= boat.user_id %></td>
+    <td><%= image_tag boat.avatar.url(:thumb) %></td>
   <% end %></tr>
 </table>
