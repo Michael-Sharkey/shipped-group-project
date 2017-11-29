@@ -4,6 +4,7 @@ class User < ApplicationRecord
 
   has_many :boats
   has_many :jobs
+  has_many :shipments
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
