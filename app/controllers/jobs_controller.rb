@@ -5,7 +5,7 @@ class JobsController < ApplicationController
   end
 
   def show
-    # see just one job
+    @job = Job.find_by(params[:id])
   end
 
   def new
