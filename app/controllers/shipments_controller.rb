@@ -5,7 +5,7 @@ class ShipmentsController < ApplicationController
   end
 
   def show
-    # see just one shipment
+    @shipment = Shipment.find_by(params[:id])
   end
 
   def new
