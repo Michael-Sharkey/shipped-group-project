@@ -15,7 +15,6 @@ class ShipmentsController < ApplicationController
   def create
     @shipment = Shipment.new(shipment_params)
     @shipment.user_id = current_user.id
-
       if @shipment.save
         redirect_to root_path
       else
@@ -25,6 +24,6 @@ class ShipmentsController < ApplicationController
 
   private
   def shipment_params
-    params.require(:job).permit( :origin, :destination, :delivery)
+    params.require(:shipment).permit( :origin, :destination, :delivery, :job_id, :boat_id)
   end
   end
