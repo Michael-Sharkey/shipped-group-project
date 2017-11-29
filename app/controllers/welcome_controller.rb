@@ -7,6 +7,5 @@ class WelcomeController < ApplicationController
   end
 
   def locations
-    require 'faker'
   end
 end
