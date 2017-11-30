@@ -1,40 +1,45 @@
-<%= form_with model: @job, local: true do |f|  %>
+<div class="container">
+  <h1 class="center">Open New Fleet Job</h1>
+  <%= form_with model: @job, local: true do |f| %>
   <% if @job.errors.any? %>
     <div id="explain_error">
-      <h2> Uh oh! <%= pluralize(@job.errors.count, "error") %> prohibited this post from being saved: </h2>
+      <h2>
+        Uh oh!
+        <%= pluralize(@job.errors.count, "error") %>
+        prohibited this post from being saved:
+      </h2>
       <ul>
         <% @job.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
-<% end %>
-<div class="form-group">
-  <%= f.label :name %>:
-  <%= f.text_field :name, class: "form-control"%>
-  <br>
-  <%= f.label :description %>:
-  <%= f.text_area :description, class: "form-control" %>
-  <br>
-  <%= f.label :cost %>:
-  <%= f.text_field :cost, class: "form-control" %>
-  <br>
-  <%= f.label :capacity %>:
-  <%= f.text_field :capacity, class: "form-control" %>
-  <br>
-  <%= f.label :origin %>:
-  <%= f.select :origin, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
-  <br>
-  <%= f.label :destination %>:
-  <%= f.select :destination, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
-  <br>
-  <%= f.label "Boats:" %>
-  <%= f.collection_check_boxes :boat_ids, Boat.all, :id, :name do |b| %>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :name %>:
+    <%= f.text_field :name, class: "form-control"%>
+    <br>
+    <%= f.label :description %>:
+    <%= f.text_area :description, class: "form-control" %>
+    <br>
+    <%= f.label :cost %>:
+    <%= f.text_field :cost, class: "form-control" %>
+    <br>
+    <%= f.label :capacity %>:
+    <%= f.text_field :capacity, class: "form-control" %>
+    <br>
+    <%= f.label :origin %>:
+    <%= f.select :origin, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
+    <br>
+    <%= f.label :destination %>:
+    <%= f.select :destination, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ], class: "form-control"%>
+    <br>
+    <%= f.label "Boats:" %>
+    <%= f.collection_check_boxes :boat_ids, Boat.all, :id, :name, class: "form-control" do |b| %>
     <%= b.check_box %>
     <%= b.label %>
   <% end %>
 </div>
-
 <%= f.submit%>
-
 <% end %>
+</div>
