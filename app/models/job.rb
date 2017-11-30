@@ -1,7 +1,7 @@
 class Job < ApplicationRecord
 
   belongs_to :user
-  has_many :boats, through: :shipments
+  has_and_belongs_to_many :boats
 
 
   validates :name, presence: true, uniqueness: true, uniqueness: { case_sensitive: false }, length: { minimum: 3}

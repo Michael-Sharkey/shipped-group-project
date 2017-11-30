@@ -4,7 +4,6 @@ class WelcomeController < ApplicationController
   def index
     @boats = Boat.all
     @jobs = Job.all
-    @shipments = Shipment.all
   end
 
   def locations

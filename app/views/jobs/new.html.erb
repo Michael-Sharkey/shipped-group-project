@@ -21,6 +21,12 @@
   <br>
   <%= f.label :capacity %>:
   <%= f.text_field :capacity %>
+  <br>
+  <%= f.label "Boat Names" %>
+  <%= f.collection_check_boxes :boat_ids, Boat.all, :id, :name do |b| %>
+    <%= b.check_box %>
+    <%= b.label %>
+  <% end %>
 </div>
 
 <%= f.submit%>

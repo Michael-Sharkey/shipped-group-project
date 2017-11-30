@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171129172859) do
+ActiveRecord::Schema.define(version: 20171130191510) do
 
   create_table "boats", force: :cascade do |t|
     t.string "name"
@@ -25,31 +25,22 @@ ActiveRecord::Schema.define(version: 20171129172859) do
     t.datetime "avatar_updated_at"
   end
 
-  create_table "boats_jobs", force: :cascade do |t|
-    t.integer "boat_id"
-    t.integer "job_id"
-    t.index ["boat_id"], name: "index_boats_jobs_on_boat_id"
-    t.index ["job_id"], name: "index_boats_jobs_on_job_id"
+  create_table "boats_jobs", id: false, force: :cascade do |t|
+    t.integer "boat_id", null: false
+    t.integer "job_id", null: false
+    t.index ["boat_id", "job_id"], name: "index_boats_jobs_on_boat_id_and_job_id"
+    t.index ["job_id", "boat_id"], name: "index_boats_jobs_on_job_id_and_boat_id"
   end
 
   create_table "jobs", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.string "origin"
+    t.string "destination"
     t.integer "cost"
     t.integer "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-  end
-
-  create_table "shipments", force: :cascade do |t|
-    t.string "origin"
-    t.string "destination"
-    t.string "delivery"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "job_id"
-    t.integer "boat_id"
     t.integer "user_id"
   end
 
