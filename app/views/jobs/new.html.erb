@@ -11,18 +11,24 @@
 <% end %>
 <div class="form-group">
   <%= f.label :name %>:
-  <%= f.text_field :name %>
+  <%= f.text_field :name, class: "form-control"%>
   <br>
   <%= f.label :description %>:
-  <%= f.text_area :description %>
+  <%= f.text_area :description, class: "form-control" %>
   <br>
   <%= f.label :cost %>:
-  <%= f.text_field :cost %>
+  <%= f.text_field :cost, class: "form-control" %>
   <br>
   <%= f.label :capacity %>:
-  <%= f.text_field :capacity %>
+  <%= f.text_field :capacity, class: "form-control" %>
   <br>
-  <%= f.label "Boat Names" %>
+  <%= f.label :origin %>:
+  <%= f.select :origin, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
+  <br>
+  <%= f.label :destination %>:
+  <%= f.select :destination, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
+  <br>
+  <%= f.label "Boats:" %>
   <%= f.collection_check_boxes :boat_ids, Boat.all, :id, :name do |b| %>
     <%= b.check_box %>
     <%= b.label %>
