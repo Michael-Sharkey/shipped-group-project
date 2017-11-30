@@ -1,15 +1,19 @@
-<table id="boats" style="width:45%">
-  <tr>
-    <th>Name</th>
-    <th>Containers</th>
-    <th>Locations</th>
-    <th>User ID</th>
-  </tr>
-  <tr><% @boats.each do |boat| %>
-    <td><%= boat.name %></td>
-    <td><%= boat.containers %></td>
-    <td><%= boat.location %></td>
-    <td><%= boat.user_id %></td>
-    <td><%= image_tag boat.avatar.url(:thumb) %></td>
-  <% end %></tr>
-</table>
+<div class="container">
+  <h1>Your Boats</h1>
+  <div class="card-deck">
+    <% @boats.each do |boat| %>
+    <div class="card">
+      <img class="card-img-top" src="<%= boat.avatar.url(:thumb) %>">
+      <div class="card-body">
+        <h4 class="card-title"><%= boat.name %></h4>
+        <p class="card-text">
+          <ul>
+            <li><strong>Port of Origin:</strong> <%= boat.location %></li>
+            <li><strong>Total Capacity:</strong> <%= boat.containers %></li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
