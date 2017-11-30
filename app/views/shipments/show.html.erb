@@ -1,2 +1,6 @@
 <h1>Shipment Manifest</h1>
-<h2><%= @shipment.origin %></h2>
+<ul>
+  <li>Shipment Origin: <%= @shipment.origin %></li>
+  <li>Shipment Destination: <%= @shipment.destination %></li>
+  <li>Requested Delivery Date: <%= @shipment.delivery %></li>
+</ul>

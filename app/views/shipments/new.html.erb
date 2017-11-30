@@ -5,15 +5,15 @@
 <%= f.select :job_id, options_from_collection_for_select(Job.all, 'id', 'name') %>
 <br>
 <%= f.label :origin %>:
-<%= f.text_field :origin %>
+<%= f.select :origin, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
 <br>
 <%= f.label :destination %>:
-<%= f.text_field :destination %>
+<%= f.select :destination, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
 <br>
 <%= f.label :delivery %>:
 <%= f.text_field :delivery %>
 <br>
-<%= f.label :boat_ids %>
+<%= f.label :boats %>
 <%= f.select(:boat_id, options_from_collection_for_select(Boat.all, 'id', 'name'), {prompt: 'Please Select'}, { multiple: true, size: 10 }) %>
 <br>
 <%= f.submit%>

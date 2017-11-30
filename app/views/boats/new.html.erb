@@ -17,7 +17,7 @@
     <%= f.text_field :containers %>
     <br>
     <%= f.label :location %>:
-    <%= f.text_field :location %>
+    <%= f.select :location, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ]%>
     <br>
     <%= f.file_field :avatar %>
     <br>
