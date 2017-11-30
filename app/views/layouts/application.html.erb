@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
 <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
 
@@ -41,7 +41,9 @@
             </div>
           </div>
           <div id="sidebar">
-
+<ul>
+  <li class="category">TEAM</li>
+</ul>
 
 
                   <ul>
@@ -79,6 +81,17 @@
                     </li>
 
                   </ul>
+                  <ul>
+                  <li id="create">CREATE</li>
+                  <li><%= link_to "Boat", new_boat_url %></li>
+                  <li><%= link_to "Job", new_job_url %></li>
+                </ul>
+
+
+
+
+
+              
 
                 </div>
 
@@ -102,8 +115,21 @@
 
 
 
+
+
+
+
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+
+
+
     <%= yield %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+
   </body>
 </html>

@@ -13,3 +13,12 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+var modal = document.querySelector('.modal');
+var hideModal = function() { modal.classList.add('hidden') }
+var showModal = function() { modal.classList.remove('hidden') }
+var toggleModal = function() { modal.classList.toggle('hidden') }
+
+
+var timeOut = window.setTimeout(showModal, 2000);
