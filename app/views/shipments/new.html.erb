@@ -14,7 +14,7 @@
 <%= f.text_field :delivery %>
 <br>
 <%= f.label :boat_ids %>
-<%= f.select :boat_id, options_from_collection_for_select(Boat.all, 'id', 'name') %>
+<%= f.select(:boat_id, options_from_collection_for_select(Boat.all, 'id', 'name'), {prompt: 'Please Select'}, { multiple: true, size: 10 }) %>
 <br>
 <%= f.submit%>
 <% end %>
