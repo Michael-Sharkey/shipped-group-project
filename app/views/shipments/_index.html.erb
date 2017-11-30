@@ -1,0 +1,18 @@
+<h1>Shipments</h1>
+
+<table id="shipments" style="width:45%">
+  <tr>
+    <th>Job ID</th>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>Delivery</th>
+    <th>Boat ID</th>
+  </tr>
+  <tr><% @shipments.each do |shipment| %>
+    <td><%= shipment.job_id %></td>
+    <td><%= shipment.origin %></td>
+    <td><%= shipment.destination %></td>
+    <td><%= shipment.delivery %></td>
+    <td><%= shipment.boat_id %></td>
+  <% end %></tr>
+</table>

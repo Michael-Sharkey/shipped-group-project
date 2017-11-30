@@ -1,18 +1,25 @@
-<h1>Jobs</h1>
-
-<table id="boats" style="width:45%">
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Origin</th>
-    <th>Destination</th>
-    <th>Cost</th>
-    <th>Capacity</th>
-  </tr>
-  <tr><% @jobs.each do |job| %>
-    <td><%= job.name %></td>
-    <td><%= job.description %></td>
-    <td><%= job.cost %></td>
-    <td><%= job.capacity %></td>
-  <% end %></tr>
-</table>
+<div class="container">
+  <h1>Your Jobs</h1>
+  <div class="card-deck">
+    <% @jobs.each do |job| %>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title"><%= job.name %></h4>
+        <p class="card-text">
+          <ul class='list-group list-group-flush'>
+            <li class='list-group-item'><strong>Port of Origin:</strong> <%= job.name %></li>
+            <li class='list-group-item'><strong>Description:</strong> <%= job.description %></li>
+            <li class='list-group-item'><strong>Total Estimated Cost:</strong> <%= job.cost %></li>
+            <li class='list-group-item'><strong>Gross Tonnage:</strong> <%= job.capacity %></li>
+            <li class='list-group-item'><strong>Port of Origin:</strong> <%= job.origin %></li>
+            <li class='list-group-item'><strong>Destination:</strong> <%= job.destination %></li>
+            <% job.boats.each do |a| %>
+              <li class='list-group-item'><strong>Boats:</strong> <%= a.name %></li>
+            <% end %>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
