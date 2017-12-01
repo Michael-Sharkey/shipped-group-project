@@ -7,9 +7,9 @@
       <div class="card-body">
         <h4 class="card-title"><%= link_to boat.name, boat_path(boat) %></h4>
         <p class="card-text">
-          <ul>
-            <li><strong>Port of Origin:</strong> <%= boat.location %></li>
-            <li><strong>Total Capacity:</strong> <%= boat.containers %></li>
+          <ul class='list-group list-group-flush'>
+            <li class='list-group-item'><strong>Port of Origin:</strong> <%= boat.location %></li>
+            <li class='list-group-item'><strong>Total Capacity:</strong> <%= boat.containers %></li>
           </ul>
         </p>
       </div>

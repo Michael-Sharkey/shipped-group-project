@@ -12,13 +12,13 @@
       </div>
   <% end %>
   <div class="form-group">
-    <%= f.label :name %>:
+    <%= f.label "Name:" %>
     <%= f.text_field :name, class: "form-control" %>
     <br>
-    <%= f.label :containers %>:
+    <%= f.label "Total Capacity:" %>
     <%= f.text_field :containers, class: "form-control" %>
     <br>
-    <%= f.label :location %>:
+    <%= f.label "Port of Origin:" %>
     <%= f.select :location, ['Boston', 'New York City', 'Philadelphia', 'Houston', 'New Orleans', 'Miami', 'Los Angeles', 'San Francisco', 'Seattle', 'Norfolk', 'Portland' ], class: "form-control"%>
     <br>
     <%= f.label "Upload Photo of Boat:" %>
