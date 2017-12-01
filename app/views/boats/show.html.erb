@@ -1,9 +1,13 @@
-<h1>Boat Dossier</h1>
-<h2><%= @boat.name %></h2>
+<div class="container">
+  <h1>Boat Dossier</h1>
+  <h2><%= @boat.name %></h2>
 
-<ul>
-<li>Total Capacity Available: <%= @boat.containers %> pounds</li>
-<li>Port of Origin: <%= @boat.location %></li>
-
-
-</ul>
+  <ul>
+    <li>Total Capacity Available:
+      <%= @boat.containers %>
+      pounds</li>
+    <li>Port of Origin:
+      <%= @boat.location %></li>
+  </ul>
+  
+</div>

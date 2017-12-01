@@ -1,19 +1,5 @@
-<h1>Welcome To Our Database</h1>
 <div><%= render 'boats/index' %></div>
+<br>
 <div><%= render 'jobs/index' %></div>
 
 <br><br>
-
-<div class="link-to">
-  <ul>
-    <li id="create">CREATE</li>
-    <li><%= link_to "Boat", new_boat_url %></li>
-    <li><%= link_to "Job", new_job_url %></li>
-  </ul>
-</div>
-
-
-
-<br><br>
-
-<%= button_to 'LOG OUT', destroy_user_session_path, method: :delete %>

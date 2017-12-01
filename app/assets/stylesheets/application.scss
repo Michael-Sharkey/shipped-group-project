@@ -15,16 +15,27 @@
   @import "bootstrap";
 
   .center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
+    text-align: center;
+    h1 {
+      margin-bottom: 10px;
+    }
   }
-}
 
-.testing {
-  justify-content: flex-end;
-  align-items: flex-end;
-}
+  .testing {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  a {
+    text-decoration: none;
+    color: #0e6dd1;
+    &:hover {
+      text-decoration: none;
+      color: #536e4f;
+    }
+  }
+
+
 
 //  html, body {
 //    font-family: 'Raleway', sans-serif;

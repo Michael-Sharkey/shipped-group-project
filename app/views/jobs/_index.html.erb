@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Your Jobs</h1>
+  <h1>Assigned Jobs</h1>
   <div class="card-deck">
     <% @jobs.each do |job| %>
     <div class="card">
@@ -7,14 +7,14 @@
         <h4 class="card-title"><%= link_to job.name, job_path(job) %></h4>
         <p class="card-text">
           <ul class='list-group list-group-flush'>
-
             <li class='list-group-item'><strong>Description:</strong> <%= job.description %></li>
             <li class='list-group-item'><strong>Total Estimated Cost:</strong> <%= job.cost %></li>
             <li class='list-group-item'><strong>Gross Tonnage:</strong> <%= job.capacity %></li>
             <li class='list-group-item'><strong>Port of Origin:</strong> <%= job.origin %></li>
             <li class='list-group-item'><strong>Destination:</strong> <%= job.destination %></li>
+            <li class='list-group-item'><strong>Assigned Boats:</strong>
             <% job.boats.each do |a| %>
-              <li class='list-group-item'><strong>Boats:</strong> <%= a.name %></li>
+              <li class='list-group-item'> <%= a.name %></li>
             <% end %>
           </ul>
         </p>
