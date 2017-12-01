@@ -37,11 +37,15 @@
   }
 
 
-.background-image {
+.background-one {
   background: url("/assets/banner.jpeg") no-repeat 50% 50% fixed;
   background-size: cover;
 }
 
+.background-two {
+  background-size: cover;
+  background-color: #609BBB;
+}
 
 .frosty {
   background: inherit;
