@@ -1,24 +1,26 @@
-# README
+#Shipped Group Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Run on your computer:**
 
-Things you may want to cover:
 
-* Ruby version
+From your project folder, clone the git repository:
 
-* System dependencies
+	git clone https://github.com/Michael-Sharkey/shipped-group-project.git
 
-* Configuration
+Open the project folder:
 
-* Database creation
+	cd shipped-group-project
 
-* Database initialization
+Install all dependencies:
 
-* How to run the test suite
+	bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+Create and seed the database:
 
-* Deployment instructions
+	rake db:migrate
 
-* ...
+Run the application:
+
+	rails server
+
+To see the application in action, open a browser window and navigate to [http://localhost:3000](http://localhost:3000).

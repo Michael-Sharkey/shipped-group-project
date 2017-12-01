@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/locations'
   root 'welcome#index'
 
-  resources :boats, except: [:edit, :update, :destroy]
-  resources :jobs, except: [:edit, :update, :destroy]
+  resources :boats
+  resources :jobs, except: [:destroy]
 
 end

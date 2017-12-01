@@ -21,6 +21,7 @@
     }
   }
 
+
   .testing {
     justify-content: flex-end;
     align-items: flex-end;
@@ -34,6 +35,20 @@
       color: #536e4f;
     }
   }
+
+
+.background-image {
+  background: url("/assets/banner.jpeg") no-repeat 50% 50% fixed;
+  background-size: cover;
+}
+
+
+.frosty {
+  background: inherit;
+  margin: -50px auto;
+  width: 300px;
+  height: auto;
+}
 
 
 

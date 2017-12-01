@@ -22,6 +22,15 @@ class BoatsController < ApplicationController
     end
   end
 
+  def destroy
+    @boat = Boat.find_by_id(params[:id])
+    if @boat.destroy
+      redirect_to root_path, notice: 'Boat deleted'
+    else
+      render 'show'
+    end
+  end
+
   private
   def boat_params
     params.require(:boat).permit(:name, :containers, :location, :avatar)
