@@ -1,7 +1,17 @@
-<h1>Job Invoice</h1>
-<h2>Job: <%= @job.name %></h2>
-<ul>
-  <li>Description: <%= @job.description %></li>
-  <li>Total Estimated Cost: $<%= @job.cost %></li>
-  <li>Total shipping weight: <%= @job.capacity %> pounds</li>
-</ul>
+<div class="container">
+  <h1>Job Invoice</h1>
+  <h2><%= @job.name %></h2>
+  <ul>
+    <li>Description: <%= @job.description %></li>
+    <li>Total Estimated Cost: $<%= @job.cost %></li>
+    <li>Gross Tonnage: <%= @job.capacity %> pounds</li>
+    <li>Port of Origin: <%= @job.origin %></li>
+    <li>Destination: <%= @job.destination %></li>
+    <li>
+    Assigned Boats: <% @job.boats.each do |a| %>
+         <%= a.name %>,
+      <% end %>
+    </li>
+
+  </ul>
+</div>
