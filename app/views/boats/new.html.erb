@@ -3,7 +3,7 @@
   <%= form_with model: @boat, local: true do |f|  %>
     <% if @boat.errors.any? %>
       <div id="explain_error">
-        <h2> Uh oh! <%= pluralize(@boat.errors.count, "error") %> prohibited this post from being saved: </h2>
+        <h2> Uh oh! <%= pluralize(@boat.errors.count, "error") %> prohibited this boat from being saved: </h2>
         <ul>
           <% @boat.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
